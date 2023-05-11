@@ -121,7 +121,7 @@ Resources:
       Description: For Security Hub Trivy Vuln Scanning Blog
       Environment:
         ComputeType: BUILD_GENERAL1_LARGE
-        Image: aws/codebuild/standard:3.0
+        Image: aws/codebuild/standard:7.0
         PrivilegedMode: True
         Type: LINUX_CONTAINER
         EnvironmentVariables:
@@ -131,6 +131,8 @@ Resources:
             Value: latest
           - Name: ecr_repo
             Value: !Sub '${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${TrivyECR}'
+          - Name: AWS_ACCOUNT_ID
+            Value: !Sub '${AWS::AccountId}'
       LogsConfig:
         CloudWatchLogs:
           Status: ENABLED
