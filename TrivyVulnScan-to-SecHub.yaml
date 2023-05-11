@@ -160,7 +160,7 @@ Resources:
                 Provider: CodeCommit
               Configuration:
                 RepositoryName: !GetAtt TrivyCodeCommit.Name
-                BranchName: master
+                BranchName: main
               OutputArtifacts:
                 -
                   Name: SourceOutput
