@@ -121,7 +121,7 @@ Resources:
       Description: For Security Hub Trivy Vuln Scanning Blog
       Environment:
         ComputeType: BUILD_GENERAL1_LARGE
-        Image: aws/codebuild/standard:3.0
+        Image: aws/codebuild/standard:7.0
         PrivilegedMode: True
         Type: LINUX_CONTAINER
         EnvironmentVariables:
